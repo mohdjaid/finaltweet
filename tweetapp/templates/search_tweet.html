@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<ul>
+    {% for tweet in tweets %}
+    <li>{{ tweet.text }} - {{ tweet.user.username }}</li>
+  {% empty %}
+    <li>No tweets found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
